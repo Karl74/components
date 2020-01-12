@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Video</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<style type="text/css">
+		* { 
+			box-sizing: border-box; 
+			margin: 0px;
+		}
+
+		body {
+			margin: 0px;
+			font-family: sans-serif;
+		}
+
+		.app {
+			display: flex;
+			max-width: 100vw;
+			max-height: 100vh;
+		}
+		.video-box {
+			width: 45vw;
+			height: 100vh;
+			position: relative;
+		}
+
+		.vid {
+			margin-top: 0vh;
+			height: 100%;
+			width: 100%;
+			object-fit: fill;
+		}
+
+		.banner {
+			position: absolute;
+			background-color: #008b00;
+			color: black;
+			font-weight: bold;
+			mix-blend-mode: screen;
+			font-size: 11.3vw;
+			padding: .2em;
+			top: 30%;
+			left: 10%;
+		}
+
+		.content{
+			width: 54vw;
+			display: flex;
+			flex-direction: column;
+			padding: 1vw;
+		}
+
+		.nav {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			font-family: 'Raleway', sans-serif;
+			font-weight: lighter;
+			line-height: 1em;
+		}
+
+		.title {
+			/*font-family:'Raleway', sans-serif;*/
+			font-weight: bold;
+			padding-top: 1.8vw;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="app">	
+		<div class="video-box">
+			<video class="vid" autoplay muted loop>
+				<source src="./card/img/bikeVideo.mp4" type="video/mp4">
+			</video>
+
+			<div class="banner">WIITS</div>
+		</div>
+
+		<div class="content">
+			<div class="nav">
+				<p>INICIO</p>
+				<p>EVENTOS</p>
+				<p>MIEMBROS</p>
+				<P>BLOG</P>
+				<P>RUTAS</P>
+			</div>
+
+			<div class="rutas">
+				<p class="title"> RUTAS 2020 </p>
+
+			</div>
+
+			<div class="card-container">
+				<div class=""></div>
+
+			</div>
+		
+		</div>
+	</div>	
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		
+		*{box-sizing:border-box;}
+
+		body{
+			background-color: #f5f5f5;
+		}
+
+		p{margin:1px 0px;
+		  font-size: .9em;	
+		}
+
+		.app{
+			margin:15vh 25vh;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			width: 210px;
+		/*	height: 229px;*/
+		}
+
+		.picture{
+			width: 100%;
+			height: 150px;
+			background-image: url(./img/race.jpg);
+			background-size: cover;
+			border-radius: 1.5vh 1.5vh 0vh 0vh;
+			cursor: pointer;
+		}
+
+		.image-box{
+			width: 100%;
+			height:150px;
+			cursor: pointer; 
+		}
+
+		.image {
+			width: 100%;
+			border-radius: 1.5vh 1.5vh 0vh 0vh;
+			object-fit: cover;
+		}
+
+		
+		.image-box-b {
+			width: 100%
+			max-height:79px;
+		}		
+
+		.altim-img {
+			width: 100%;
+			border-radius:0vh 0vh 1.5vh 1.5vh;
+			object-fit: cover;
+		}
+
+		.info{
+			position:relative;
+			background-color: #ffffff;
+			border-radius: 0vh 0vh 1.5vh 1.5vh;
+			padding:7px 5px;
+			font-family: Arial, sans-serif;
+			font-size: .9em;
+			cursor: pointer;
+		}
+
+		.card-title {
+			margin:0px;
+			font-family:Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma, sans-serif; 
+			font-size: 1em;
+			line-height: 15px;
+			font-weight: 100;
+			font-stretch: ultra-expanded;
+			color: #808080;
+		}
+
+		.distance {
+			margin:2px 0px 0px 0px;
+		}
+
+
+		.plus {
+			position:absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2em;
+			font-weight: bold;
+			top: 40px;
+			left: 175px;
+			width: 29px;
+			height: 29px;
+			border-radius: 100%;
+			background-color:green;
+			color:white;
+		}
+
+		.flip-card {
+			width: 210px;
+			height: 229px;
+			perspective: 900px;
+			/*background-color: transparent;*/
+		}
+
+		.flip-card-inner{
+			position:relative;
+			transition: 0.8s;
+			transform-style: preserve-3d;
+		}
+
+
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+		}
+
+		.front, .back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility:hidden;
+		}
+
+		.back {
+			transform: rotateY(180deg);
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="app">
+		<div class="card">
+			<div class="picture"></div>
+			<div class="info">
+				<h1 class="card-title">RUTA</h1>
+				<P class="note">Acambaro - Testasquieto</P>
+				<p class="terreno"> Terreno: Escarpado</p>
+				<p class="distance"><span>19 </span>Km</p>
+			<div class="plus">+</div>
+			</div>
+		</div>
+
+	<!-- <div>
+		<h1>Card with object fit</h1>
+	</div> -->
+
+
+		<div class="card">
+			<div class="image-box">
+				<img src="./img/frontBike.jpg" class="image">
+			</div>
+			<div class="info">
+				<h1 class="card-title">RUTA</h1>
+				<P class="note">Acambaro - Testasquieto</P>
+				<p class="terreno"> Terreno: Escarpado</p>
+				<p class="distance"><span>19 </span>Km</p>
+			<div class="plus">+</div>
+			</div>
+			
+		</div>
+
+<!-- 
+		<div>
+			<h1>Front and back cards</h1>
+		</div>	 -->	
+
+		<div class="card">
+			<div class="image-box">
+				<img src="./img/frontBike.jpg" class="image">
+			</div>
+			<div class="info">
+				<h1 class="card-title">RUTA</h1>
+				<P class="note">Acambaro - Testasquieto</P>
+				<p class="terreno"> Terreno: Escarpado</p>
+				<p class="distance"><span>19 </span>Km</p>
+			<div class="plus">+</div>
+			</div>
+		</div>	
+
+		<div class="card">
+			<div class="image-box">
+				<img src="./img/map.jpg" class="image">
+			</div>
+			<div class="image-box-b">
+				<img src="./img/altim.jpg" class="altim-img">
+			</div>
+		</div>
+<!-- 
+		<div>
+			<h1>FLIP EFFECT</h1>
+		</div>		 -->
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="card front">
+					<div class="image-box">
+						<img src="./img/frontBike.jpg" class="image">
+					</div>
+					<div class="info">
+						<h1 class="card-title">RUTA</h1>
+						<P class="note">Acambaro - Testasquieto</P>
+						<p class="terreno"> Terreno: Escarpado</p>
+						<p class="distance"><span>19 </span>Km</p>
+						<div class="plus">+</div>
+					</div>
+				</div>
+
+				<div class="card back">
+					<div class="image-box">
+						<img src="./img/map.jpg" class="image">
+					</div>
+					<div class="image-box-b">
+						<img src="./img/altim.jpg" class="altim-img">
+					</div>
+				</div>	
+			</div> <!-- endof card inner -->
+		</div>	<!-- endof flipcard -->
+
+
+
+	</div>
+
+</body>
+</html>
